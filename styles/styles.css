@@ -1,0 +1,411 @@
+/* font imports */
+@font-face {
+  font-family: Vanguard;
+  src: url("../font/VanguardCF-HeavyOblique.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NPS-Medium;
+  src: url("../font/NewPanamSkyline-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NPS-Bold;
+  src: url("../font/NewPanamSkyline-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NPS-Black;
+  src: url("../font/NewPanamSkyline-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NPS-Regular;
+  src: url("../font/NewPanamSkyline-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Silka-Regular;
+  src: url("../font/Silka-Regular.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+}
+
+p, h1 {
+  color: white;
+  font-family: Silka-Regular;
+}
+
+h1 {
+  font-family: Vanguard;
+}
+
+h2 {
+  font-family: NPS-Black;
+  font-size: 50px;
+  color: white;
+}
+
+h4 {
+  font-family: NPS-Bold;
+  font-size: 25px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-family: NPS-Medium;
+}
+
+body {
+  background-color: #262626;
+}
+
+header {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80vw;
+  max-width: 1520px;
+  min-width: 800px;
+  margin: auto;
+}
+
+header #logo {
+  font-family: Vanguard;
+  font-size: 41px;
+}
+
+header .menu__points {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 451px;
+  font-size: 18px;
+}
+
+.hero__section {
+  width: 100%;
+  background: url("../images/heroPicture.png") no-repeat center/cover;
+  height: 83vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__section h1 {
+  background-color: #262626;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 7em;
+  padding: 0px 25px 0px 25px;
+  margin-bottom: -25px;
+}
+
+.hero__section #hero__text {
+  font-family: Silka-Regular;
+  color: #FFF1AA;
+  background-color: #262626;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2.5em;
+  padding: 0px 25px 15px;
+  margin-top: 20px;
+}
+
+.hero__section .hero__content {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80vw;
+  max-width: 1520px;
+  min-width: 800px;
+}
+
+.page__wrapper {
+  margin: auto;
+  width: 80vw;
+  max-width: 1520px;
+  min-width: 800px;
+}
+
+.socials__section {
+  padding: 30px;
+  width: 450px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+hr {
+  margin: auto;
+}
+
+.offer__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.offer__section .left__side {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 10.5rem;
+  top: 100px;
+  position: sticky;
+  position: -webkit-sticky;
+  /* Safari */
+}
+
+.offer__section .right__side .content__area {
+  border: 1px solid white;
+  border-right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 460px;
+}
+
+.offer__section .right__side .content__area img {
+  width: 120px;
+}
+
+.offer__section .right__side .content__area .content__text {
+  padding-left: 50px;
+  width: 45%;
+}
+
+.offer__section .right__side .content__area:last-child {
+  border-bottom: 0px;
+}
+
+.founder__section {
+  background-color: white !important;
+}
+
+.founder__section h2, .founder__section p {
+  color: #262626;
+}
+
+.founder__section .founder__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10.5rem;
+  padding-bottom: 7rem;
+}
+
+.founder__section .founder__text p {
+  width: 70ch;
+}
+
+.founder__section .founder__portrait {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 7rem;
+  min-width: 360px;
+}
+
+.founder__section .founder__portrait .portrait__name {
+  font-family: NPS-Medium;
+  font-size: 1.25rem;
+  padding: 0.75em 0em;
+}
+
+.founder__section .founder__portrait p {
+  width: 37ch;
+}
+
+.cooperation__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10.5rem;
+  padding-bottom: 7rem;
+}
+
+.cooperation__section p {
+  width: 50ch;
+}
+
+.logo__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 7rem;
+}
+
+.logo__section img {
+  width: 117px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 17%;
+          flex: 0 1 17%;
+  padding: 1em;
+}
+
+.pricing__section .pricing__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10.5rem;
+  padding-bottom: 7rem;
+}
+
+.pricing__section .pricing__text p {
+  width: 50ch;
+}
+
+.pricing__section table {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: #404040;
+  padding: 0.75rem;
+}
+
+.pricing__section table th {
+  padding: 1rem 4rem;
+  font-family: NPS-Medium;
+}
+
+.pricing__section table td {
+  padding: 1rem 4rem;
+  font-family: Silka-Regular;
+}
+
+.pricing__section table .highlighted {
+  font-family: NPS-Bold;
+}
+
+.pricing__section .pricing__includes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10.5rem;
+  padding-bottom: 7rem;
+}
+
+.pricing__section ul {
+  color: white;
+}
+
+.pricing__section ul li {
+  font-family: Silka-Regular;
+  font-size: 20px;
+  padding-bottom: 2rem;
+}
+
+.last__section {
+  background-color: white;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.last__section .cta__section {
+  padding-top: 10.5rem;
+  padding-bottom: 7rem;
+}
+
+.last__section #cta__text {
+  font-family: NPS-Bold;
+  font-size: 110px;
+  color: #151515;
+}
+
+.last__section #cta__mail {
+  -webkit-text-stroke: #262626 0.5px;
+  font-family: NPS-Regular;
+  font-size: 90px;
+  padding: 5rem;
+}
+
+.last__section .footer__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.last__section .footer__font {
+  color: #262626;
+  font-family: NPS-Regular;
+  font-size: 18px;
+  padding: 2rem;
+}
+/*# sourceMappingURL=styles.css.map */
