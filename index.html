@@ -9,36 +9,49 @@
 </head>
 
     <body>
-        <header>
+        <header class="primary-header flex">
             <p id="logo">NO UNICORN (YET)</p>
-            <div class="menu__points">
-                <a href="#">
-                    <p>ABOUT</p>
-                </a>
-                <a href="#">
-                    <p>PORTFOLIO</p>
-                </a>
-                <a href="#">
-                    <p>PRICING</p>
-                </a>
-                <a href="#">
-                    <p>CONTACT</p>
-                </a>
-            </div>
+
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only"></span></button>
+
+            <nav>            
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li>
+                        <a href="#">
+                            <p>ABOUT</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>PORTFOLIO</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>PRICING</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>CONTACT</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
 
-        <div class="hero__section">
-            <div class="page__wrapper">
-                <div class="hero__content">
+        <div class="hero-section">
+            <div class="page-wrapper">
+                <div class="hero-content">
                     <h1>EXPERIENCING</h1>
                     <h1>VALUES.</h1>
-                    <p id="hero__text">SINCE 2018</p>
+                    <p id="hero-text">SINCE 2018</p>
                 </div>
             </div>
         </div>
 
-        <div class="page__wrapper">
-            <div class="socials__section">
+        <div class="page-wrapper">
+            <div class="socials-section">
                 <a href="#">
                     <p>FACEBOOK</p>
                 </a>
@@ -51,43 +64,48 @@
             </div>
 
             <hr></hr>
+            
+            <div class="business-section">
+                <p id="description-text">We combine marketing, public relations and art for the communication of your company. </p>
+            </div>
 
-            <div class="offer__section">
-                <div class="left__side">
+            <hr></hr>
+            <div class="offer-section">
+                <div class="left-side">
                     <h2>WHAT WE <br>OFFER</h2>
                 </div>
-                <div class="right__side">
-                    <div class="content__area">
+                <div class="right-side">
+                    <div class="content-area">
                         <img src="images/strategies.svg" alt="strategies">
-                        <div class="content__text">
+                        <div class="content-text">
                             <h4>Strategies</h4>
                             <p>Our experts from marketing, public relations and art create your individual communication strategy based on the current parameters of your target group.</p>
                         </div>
                     </div>
-                    <div class="content__area">
+                    <div class="content-area">
                         <img src="images/concepts.svg" alt="concepts">
-                        <div class="content__text">
+                        <div class="content-text">
                             <h4>Concepts</h4>
                             <p>Based on your communication strategy, we create unique campaigns and concepts to make your company modern, transparent and approachable.</p>
                         </div>
                     </div>
-                    <div class="content__area">
+                    <div class="content-area">
                         <img src="images/nftrealestate.svg" alt="nftrealestate">
-                        <div class="content__text">
+                        <div class="content-text">
                             <h4>NFT Real Estate</h4>
                             <p>We create the ultimate sales tool for you by combining 3D modelling with real-time communication and a gaming engine. Let potential investors and customers discover your upcoming project today. The final product can be mined as NFT</p>
                         </div>
                     </div>
-                    <div class="content__area">
+                    <div class="content-area">
                         <img src="images/socialmedia.svg" alt="socialmedia">
-                        <div class="content__text">
+                        <div class="content-text">
                             <h4>Social Media</h4>
                             <p>We guide your social media work from conceptualisation to implementation and monitoring.</p>
                         </div>
                     </div>
-                    <div class="content__area">
+                    <div class="content-area">
                         <img src="images/artevents.svg" alt="artevents">
-                        <div class="content__text">
+                        <div class="content-text">
                             <h4>Art & Events</h4>
                             <p>Let's work together to create experiences rather than impressions for your customers. </p>
                         </div>
@@ -95,39 +113,41 @@
                 </div>
             </div>
         </div>
-        <div class="founder__section">
-            <div class="page__wrapper">
-                <div class="founder__text">
-                    <h2>OUR<br>FOUNDERS</h2>
-                    <p>
-                        We want to create experiences instead of impressions. We are convinced that the future of communication lies in the closeness and transparency of companies. Social selling is the key.
-                        <br>
-                        We bring the storytelling of theater and art into the world of branding. 
-                        That's why we founded No Unicorn (Yet).
-                    </p>
-                </div>
-                <div class="founder__portrait">
-                    <div class="portrait__card">
-                        <img src="images/portrait-placeholder.png" alt="portrait1">
-                        <p class="portrait__name">Samir  Abdo</p>
-                        <p>Over 30 years' experience in hotel and catering in New York, Los Angeles, Milan and New Orleans. There he managed clubs, restaurants and bars from their conception to their implementation.</p>
-                    </div>
-                    <div class="portrait__card">
-                        <img src="images/portrait-placeholder.png" alt="portrait1">
-                        <p class="portrait__name">Moritz Tonn</p>
-                        <p>Over 10 years of experience in theater, curation, public relations and communication in Vienna and Berlin. There he has worked as director, curator and consultant.</p>
+        <div class="founder-section">
+            <div class="page-wrapper">
+                <div class="founder-text">
+                    <h2>MEET OUR<br>FOUNDERS</h2>
+                    <div class="founder-rightside">
+                        <p>
+                            We want to create experiences instead of impressions. We are convinced that the future of communication lies in the closeness and transparency of companies. Social selling is the key.
+                            <br><br>
+                            “We bring the storytelling of theater and art into the world of branding. 
+                            That's why we founded No Unicorn (Yet).”
+                        </p>
+                        <div class="founder-portrait">
+                            <div class="portrait-card">
+                                <img src="images/portrait-placeholder.png" alt="portrait1">
+                                <p class="portrait-name">Samir  Abdo</p>
+                                <p>Over 30 years' experience in hotel and catering in New York, Los Angeles, Milan and New Orleans. There he managed clubs, restaurants and bars from their conception to their implementation.</p>
+                            </div>
+                            <div class="portrait-card">
+                                <img src="images/portrait-placeholder.png" alt="portrait1">
+                                <p class="portrait-name">Moritz Tonn</p>
+                                <p>Over 10 years of experience in theater, curation, public relations and communication in Vienna and Berlin. There he has worked as director, curator and consultant.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="page__wrapper">
-            <div class="cooperation__section">
+        <div class="page-wrapper">
+            <div class="cooperation-section">
                 <h2>WE WORKED<br>WITH</h2>
                 <p>
                     Not just clients, but partners.In the course of the past 4 years, we have been able to create experiences for the most diverse target groups together with these companies
                 </p>
             </div>
-            <div class="logo__section">
+            <div class="logo-section">
                 <img src="images/logo-placeholder.png" alt="placeholder">
                 <img src="images/logo-placeholder.png" alt="placeholder">
                 <img src="images/logo-placeholder.png" alt="placeholder">
@@ -142,8 +162,8 @@
 
             <hr></hr>
 
-            <div class="pricing__section">
-                <div class="pricing__text">
+            <div class="pricing-section">
+                <div class="pricing-text">
                     <h2>OUR FLAT<br>RATE</h2>
                     <p>
                         Every project is unique. It is hard to estimate work without knowing it's details, but we try to describe what you can get for the money & time you invest.
@@ -161,62 +181,61 @@
                         <td colspan="3"> <hr /> </td>      
                     </tr>
                     <tr>
-                        <td class="highlighted">Small project name</td>
-                        <td>90+</td>
-                        <td>up to 5 concept pages</td>
+                        <td class="highlighted">Concepts</td>
+                        <td>80+</td>
+                        <td>Analysis of existing brand, Style Guide, Conceptual Design, Scheduling</td>
                     </tr>
                     <tr>
-                        <td class="highlighted">Mid-size project name</td>
-                        <td>130+</td>
-                        <td>10-15 complete concept pages</td>
+                        <td class="highlighted">Social Media</td>
+                        <td>120+</td>
+                        <td>Design Manual, Template creation, Account creation, 4 campaigns, Scheduling, Implementation</td>
                     </tr>
                     <tr>
-                        <td class="highlighted">Really really really long project name </td>
+                        <td class="highlighted">Strategy</td>
                         <td>140+</td>
-                        <td>Full marketing strategy plan</td>
+                        <td>For short- / mid- / long-term Analysis of existing brand, Strategic Planning, Conceptual Design, Scheduling, Implementation,</td>
                     </tr>
                     <tr>
-                        <td class="highlighted">Small project name</td>
-                        <td>180+</td>
-                        <td>Full mid-size project concept plan</td>
+                        <td class="highlighted">Communications</td>
+                        <td>200+</td>
+                        <td>Monitoring corporate communications, Lobbying & Networking, Public & Press Relations</td>
                     </tr>
                     <tr>
-                        <td class="highlighted">Mid-size project name</td>
-                        <td>220+</td>
-                        <td>Really big project concept plan</td>
+                        <td class="highlighted">Brand Management</td>
+                        <td>300+</td>
+                        <td>Brand Book, Strategy + 4 campaigns, Social Media, Scheduling, Implementation</td>
                     </tr>
                 </table>
-                <div class="pricing__includes">
-                    <h2>EVERY<br>PROJECT<br>INCLUDES</h2>
+                <div class="pricing-includes">
+                    <h3>EVERY PROJECT INCLUDES</h3>
                     <ul>
-                        <li>What ever you want</li>
-                        <li>What ever you want</li>
-                        <li>What ever you want</li>
+                        <li>Clarification of the target group</li>
+                        <li>Analysis of current corporate communications</li>
+                        <li>Definition of corporate values</li>
                     </ul>
                     <ul>
-                        <li>What ever you want</li>
-                        <li>What ever you want</li>
-                        <li>What ever you want</li>
+                        <li>Analysis of existing Social Media Accounts</li>
+                        <li>Clarification of the corporate Tone of Voice</li>
+                        <li>Definition of the corporate identity</li>
                     </ul>
                     <ul>
-                        <li>What ever you want</li>
-                        <li>What ever you want</li>
-                        <li>What ever you want</li>
+                        <li>Communication media definition </li>
+                        <li>Briefing of the employees / executives</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="last__section">
-            <div class="page__wrapper">
-                <div class="cta__section">
-                    <h1 id="cta__text">LET'S WORK TOGETHER!</h1>
-                    <h2 id="cta__mail">hello@nounicornyet.com</h2>
+        <div class="last-section">
+            <div class="page-wrapper">
+                <div class="cta-section">
+                    <h1 id="cta-text">LET'S WORK TOGETHER!</h1>
+                    <h2 id="cta-mail">hello@nounicornyet.com</h2>
                     <img src="images/mail-cta.svg" alt="mail">
                 </div>
                 <hr></hr>
-                <div class="footer__section">
-                    <p class="footer__font">PRIVACY POLICY</p>
-                    <p class="footer__font">TERMS&CONDITIONS</p>
+                <div class="footer-section">
+                    <p class="footer-font">PRIVACY POLICY</p>
+                    <p class="footer-font">TERMS & CONDITIONS</p>
                 </div>
             </div>
         </div>

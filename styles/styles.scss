@@ -35,6 +35,10 @@
     margin: 0;
 }
 
+p{
+    line-height: 1.725em;
+}
+
 p, h1 {
     color: white;
     font-family: Silka-Regular;
@@ -48,6 +52,14 @@ h2 {
     font-family: NPS-Black;
     font-size: 50px;
     color: white;
+    line-height: 1em;
+}
+
+h3 {
+    font-family: NPS-Black;
+    font-size: 35px;
+    color: white;
+    line-height: 1em;
 }
 
 h4 {
@@ -63,96 +75,74 @@ a {
 
 body {
     background-color: #262626;
+    overflow-x: hidden;
 }
 
-header {
-    padding:20px;
-    display:flex;
-    flex-direction: row;
+#logo {
+    font-family: Vanguard;
+    font-size: 41px;
+    margin: 2rem;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.primary-header {
+    align-items: center;
     justify-content: space-between;
-    width: 80vw;
-    max-width: 1520px;
-    min-width: 800px;
-    margin: auto;
-
-    #logo {
-        font-family: Vanguard;
-        font-size: 41px;
-    }
-    .menu__points {
-        align-items: center;
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 451px;
-        font-size: 18px;
-    }
-    .nav-trigger {
-        display: none;
-    }
 }
 
-@media only screen and (max-width: 600px) {
+.mobile-nav-toggle {
+    display:none;
+}
 
-    .nav-trigger {
+.primary-navigation {
+    list-style: none;
+    padding: 3rem;
+    margin: 0;
+}
+
+@media (max-width: 799px) {
+    .primary-navigation{
+        gap: var(--gap, 3rem);
         position: fixed;
-        z-index: 4;
-        top: 40px;
-        right: 40px;
-        height: 44px;
-        width: 44px;
-    
-        overflow: hidden;
-        color: transparent;
-        white-space: nowrap;
-        text-indent: 100%;
-    } 
-    
-    .nav-trigger span,
-    .nav-trigger span::before,
-    .nav-trigger span::after {
+        inset: 0 0 0 0;
+        background: #262626;
+        flex-direction: column;
+        padding: 10rem 2em;
+        z-index: 1;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
         position: absolute;
-        height: 2px;
-        width: 36px;
-        background: #2e2828;
-    } 
-    
-    .nav-trigger span {
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: background .3s;
+        top: 3rem;
+        right: 2rem;
+        z-index: 10;
+        background-color: transparent;
+        background-image: url("../images/burgermenu.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 2rem;
+        border: 0;
+        aspect-ratio: 1;
     }
-    
-    .nav-trigger span::before,
-    .nav-trigger span::after {
-        content: '';
-        top: 0;
-        left: 0;
-        transition: background .3s, transform .3s;
-    }
-    
-    .nav-trigger span::before {
-        transform: translateY(-12px);
-    }
-    
-    .nav-trigger span::after {
-        transform: translateY(12px);
-    }
-    
-    .nav-open .nav-trigger span {
-        background: transparent;
-    }
-    
-    .nav-open .nav-trigger span::before {
-        transform: rotate(-45deg);
-    }
-    
-    .nav-open .nav-trigger span::after {
-        transform: rotate(45deg);
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("../images/close.svg");
     }
 }
-.hero__section {
+
+.hero-section {
     width: 100%;
     background: url('../images/heroPicture.png') no-repeat center / cover;
     height:83vh;
@@ -164,7 +154,7 @@ header {
         padding: 0px 25px 0px 25px;
         margin-bottom: -25px;
     }
-    #hero__text{
+    #hero-text{
         font-family: Silka-Regular;
         color:#FFF1AA;
         background-color: #262626;
@@ -173,7 +163,7 @@ header {
         padding: 0px 25px 15px;
         margin-top: 20px;
     }
-    .hero__content {
+    .hero-content {
         margin-top:auto;
         margin-bottom: auto;
         width: 80vw;
@@ -182,14 +172,14 @@ header {
     }
 }
 
-.page__wrapper {
+.page-wrapper {
     margin: auto;
     width: 80vw;
     max-width: 1520px;
     min-width: 800px;
 }
 
-.socials__section {
+.socials-section {
     padding:30px;
     width:450px;
     margin:auto;
@@ -202,10 +192,20 @@ hr {
     margin:auto;
 }
 
-.offer__section {
+.business-section {
+    margin:auto;
+    margin-top: 10em;
+    margin-bottom: 10em;
+    max-width: 90ch;
+    p{
+        font-size: 2em;
+    }
+}
+
+.offer-section {
     display:flex;
     flex-direction: row;
-    .left__side {
+    .left-side {
         width:100%;
         height:fit-content;
         margin-top: 10.5rem;
@@ -213,8 +213,8 @@ hr {
         position: sticky;
         position: -webkit-sticky; /* Safari */
     }
-    .right__side {
-        .content__area {
+    .right-side {
+        .content-area {
             border: 1px solid white;
             border-right: 0px;
             display: flex;
@@ -226,39 +226,45 @@ hr {
             img {
                 width: 120px;
             }
-            .content__text{
+            .content-text{
                 padding-left:50px;
                 width:45%;
                 
             }
         }
-        .content__area:last-child{
+        .content-area:first-child{
+            border-top: 0px;
+        }
+        .content-area:last-child{
             border-bottom: 0px;
         }
     }
 }
 
-.founder__section {
+.founder-section {
     background-color: white!important;
     h2,p {
         color: #262626;
     }
-    .founder__text {
+    .founder-text {
         display:flex;
         justify-content: space-between;
         padding-top: 10.5rem;
-        padding-bottom: 7rem;
+        padding-bottom: 2rem;
         p {
             width: 70ch;
         }
     }
 
-    .founder__portrait {
+    .founder-portrait {
+        margin-top: 6em;
+        gap: 1.75em;
         display:flex;
         justify-content: space-between;
         padding-bottom: 7rem;
         min-width:360px;
-        .portrait__name{
+        .portrait-name{
+            max-width: fit-content;
             font-family: NPS-Medium;
             font-size: 1.25rem;
             padding: 0.75em 0em;
@@ -270,7 +276,7 @@ hr {
 
 }
 
-.cooperation__section {
+.cooperation-section {
     display: flex;
     justify-content: space-between;
     padding-top: 10.5rem;
@@ -280,7 +286,7 @@ hr {
     }
 }
 
-.logo__section {
+.logo-section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -292,8 +298,8 @@ hr {
     }
 }
 
-.pricing__section {
-    .pricing__text{
+.pricing-section {
+    .pricing-text{
         display:flex;
         justify-content: space-between;
         padding-top: 10.5rem;
@@ -322,49 +328,49 @@ hr {
         }
     }
 
-    .pricing__includes {
+    .pricing-includes {
         display:flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-around;
+        gap: 5.2em;
         padding-top: 10.5rem;
-        padding-bottom: 7rem;
+        padding-bottom: 7rem;   
     }
     ul {
         color: white;
         li {
             font-family: Silka-Regular;
-            font-size: 20px;
+            font-size: 14.5px;
             padding-bottom: 2rem;
         }
     }
 }
 
-.last__section {
-    .cta__section {
+.last-section {
+    .cta-section {
         padding-top: 10.5rem;
         padding-bottom: 7rem;
     }
     background-color: white;
     text-align: center;
     align-items: center;
-    #cta__text {
+    #cta-text {
         font-family: NPS-Bold;
         font-size: 110px;
         color: #151515
     }
 
-    #cta__mail {
+    #cta-mail {
         -webkit-text-stroke: #262626 0.5px;
         font-family: NPS-Regular;
         font-size: 90px;
         padding: 5rem;
     }
-    .footer__section{
+    .footer-section{
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .footer__font {
+    .footer-font {
         color:#262626;
         font-family: NPS-Regular;
         font-size: 18px;

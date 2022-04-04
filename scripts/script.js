@@ -1,20 +1,13 @@
-var navTrigger = document.getElementsByClassName('nav-trigger')[0],
-    body = document.getElementsByTagName('body')[0];
+const primaryNav = document.querySelector('.primary-navigation')
+const navToggle = document.querySelector('.mobile-nav-toggle')
 
-navTrigger.addEventListener('click', toggleNavigation);
-
-function toggleNavigation(event) {
-  event.preventDefault();
-  body.classList.toggle('nav-open');
-}
-
-for (idx = 0; idx < 7; idx++) {
-  var NavA = document.getElementsByClassName('nav-item')[idx];
-  NavA.addEventListener('click', toggleNavigation);
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => { 
-  anchor.addEventListener('click', function (e) { 
-    e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); 
-  }); 
-});
+navToggle.addEventListener('click', () => {
+  const visibility = primaryNav.getAttribute('data-visible')
+  if (visibility === "false") {
+    primaryNav.setAttribute('data-visible', true)
+    navToggle.setAttribute('aria-expanded', true)
+  } else {
+    primaryNav.setAttribute('data-visible', false)
+    navToggle.setAttribute('aria-expanded', false)
+  }
+})
