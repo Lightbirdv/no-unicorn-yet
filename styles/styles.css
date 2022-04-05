@@ -37,12 +37,13 @@ p {
   line-height: 1.725em;
 }
 
-p, h1 {
+p {
   color: white;
   font-family: Silka-Regular;
 }
 
 h1 {
+  color: white;
   font-family: Vanguard;
 }
 
@@ -73,12 +74,11 @@ a {
 
 body {
   background-color: #262626;
-  overflow-x: hidden;
 }
 
 #logo {
   font-family: Vanguard;
-  font-size: 41px;
+  font-size: 3em;
   margin: 2rem;
 }
 
@@ -108,7 +108,7 @@ body {
   margin: 0;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 50rem) {
   .primary-navigation {
     gap: var(--gap, 3rem);
     position: fixed;
@@ -137,7 +137,7 @@ body {
   .mobile-nav-toggle {
     display: block;
     position: absolute;
-    top: 3rem;
+    top: 3.25rem;
     right: 2rem;
     z-index: 10;
     background-color: transparent;
@@ -151,6 +151,23 @@ body {
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("../images/close.svg");
   }
+}
+
+@media (max-width: 30rem) {
+  #logo {
+    font-size: 2em;
+    color: red;
+  }
+  .mobile-nav-toggle {
+    width: 1.5rem;
+    top: 2.75rem;
+  }
+}
+
+.page-wrapper {
+  margin: auto;
+  width: 80vw;
+  min-width: 800px;
 }
 
 .hero-section {
@@ -191,15 +208,24 @@ body {
   min-width: 800px;
 }
 
-.page-wrapper {
-  margin: auto;
-  width: 80vw;
-  min-width: 800px;
+@media (max-width: 30rem) {
+  .hero-section {
+    height: 65vh;
+  }
+  .hero-section h1 {
+    font-size: 15vw;
+    margin-bottom: -3vw;
+  }
+  .hero-section #hero-text {
+    font-size: 6vw;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .socials-section {
   padding: 30px;
-  width: 450px;
+  max-width: 450px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,6 +237,15 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 30rem) {
+  .page-wrapper {
+    min-width: 0;
+  }
+  .socials-section {
+    font-size: clamp(12px, 3.5vw, 20px);
+  }
 }
 
 hr {
@@ -226,6 +261,18 @@ hr {
 
 .business-section p {
   font-size: 2em;
+}
+
+@media (max-width: 30rem) {
+  .business-section {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  .business-section p {
+    line-height: 1.5em;
+    font-size: clamp(12px, 4.75vw, 30px);
+  }
 }
 
 .offer-section {
@@ -284,6 +331,20 @@ hr {
 
 .offer-section .right-side .content-area:last-child {
   border-bottom: 0px;
+}
+
+@media (max-width: 30rem) {
+  .offer-section {
+    display: block;
+  }
+  .offer-section .left-side {
+    position: relative;
+    top: 0;
+    margin-top: 2.5rem;
+  }
+  .offer-section .right-side .content-area {
+    border: 0;
+  }
 }
 
 .founder-section {
