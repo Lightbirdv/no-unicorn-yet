@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <title>No Unicorn (Yet)</title>
 </head>
 
@@ -112,7 +113,43 @@
                     </div>
                 </div>
             </div>
+            <hr></hr>
         </div>
+
+        <div class="casestudy-section">
+            <div class="page-wrapper">
+                <h2>WHAT WE HAVE DONE SO FAR</h2>
+            </div>
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-card">
+                        <h3 class="casestudy-name unselectable">QT/eventstudio</h4>
+                        <h3 class="casestudy-slogan unselectable">#LifeIsQTful</h3>
+                        <p class="casestudy-action unselectable">Brand | Design</p>
+                        <button class="casestudy-bttn">View Case study -></button>
+                    </div> 
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-card">
+                        <h3 class="casestudy-name unselectable">Siemens</h4>
+                        <button class="casestudy-bttn">View Case study -></button>
+                    </div> 
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-card">
+                        <h3 class="casestudy-name unselectable">Himmel Unter Berlin</h4>
+                        <h3 class="casestudy-slogan unselectable">Einladungsmanagment</h3>
+                        <p class="casestudy-action unselectable">Brand | Marketing Concept | Design</p>
+                        <button class="casestudy-bttn">View Case study -></button>
+                    </div> 
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
         <div class="founder-section">
             <div class="page-wrapper">
                 <div class="founder-text">
@@ -126,12 +163,12 @@
                         </p>
                         <div class="founder-portrait">
                             <div class="portrait-card">
-                                <img src="images/portrait-placeholder.png" alt="portrait1">
+                                <img src="images/founder_picture1.png" alt="Samir Abdo">
                                 <p class="portrait-name">Samir  Abdo</p>
                                 <p>Over 30 years' experience in hotel and catering in New York, Los Angeles, Milan and New Orleans. There he managed clubs, restaurants and bars from their conception to their implementation.</p>
                             </div>
                             <div class="portrait-card">
-                                <img src="images/portrait-placeholder.png" alt="portrait1">
+                                <img src="images/founder_picture2.png" alt="Moritz Tonn">
                                 <p class="portrait-name">Moritz Tonn</p>
                                 <p>Over 10 years of experience in theater, curation, public relations and communication in Vienna and Berlin. There he has worked as director, curator and consultant.</p>
                             </div>
@@ -171,6 +208,7 @@
                         Roud works with different scale projects with a flat rate of 50 eur/h.
                     </p>
                 </div>
+                <!-- desktop -->
                 <table>
                     <tr>
                         <th align="left">PROJECT TYPE</th>
@@ -206,6 +244,36 @@
                         <td>Brand Book, Strategy + 4 campaigns, Social Media, Scheduling, Implementation</td>
                     </tr>
                 </table>
+
+                <!-- mobile -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-card">
+                                <h3 class="casestudy-name unselectable">QT/eventstudio</h4>
+                                <h3 class="casestudy-slogan unselectable">#LifeIsQTful</h3>
+                                <p class="casestudy-action unselectable">Brand | Design</p>
+                                <button class="casestudy-bttn">View Case study -></button>
+                            </div> 
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-card">
+                                <h3 class="casestudy-name unselectable">Siemens</h4>
+                                <button class="casestudy-bttn">View Case study -></button>
+                            </div> 
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-card">
+                                <h3 class="casestudy-name unselectable">Himmel Unter Berlin</h4>
+                                <h3 class="casestudy-slogan unselectable">Einladungsmanagment</h3>
+                                <p class="casestudy-action unselectable">Brand | Marketing Concept | Design</p>
+                                <button class="casestudy-bttn">View Case study -></button>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
                 <div class="pricing-includes">
                     <h3>EVERY PROJECT INCLUDES</h3>
                     <ul>
@@ -239,6 +307,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="./scripts/script.js"></script>
     </body>
 </html>

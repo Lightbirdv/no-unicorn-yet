@@ -11,3 +11,22 @@ navToggle.addEventListener('click', () => {
     navToggle.setAttribute('aria-expanded', false)
   }
 })
+
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  centeredSlides: false,
+  spaceBetween: 0,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is <= 499px
+    481: {
+        slidesPerView: 3,
+        spaceBetweenSlides: 0
+    }
+  }
+});
+ 
