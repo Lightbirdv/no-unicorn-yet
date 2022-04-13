@@ -29,4 +29,14 @@ var swiper = new Swiper(".mySwiper", {
     }
   }
 });
+
+var swiper = new Swiper(".pricingSwiper", {
+  slidesPerView: 1,
+  centeredSlides: false,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  }
+});
  

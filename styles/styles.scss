@@ -30,6 +30,9 @@
 	src: url("../font/Silka-Regular.otf") format("opentype");
 }
 
+html {
+    scroll-behavior:smooth;
+}
 
 * {
     margin: 0;
@@ -537,10 +540,21 @@ hr {
     }
 }
 
+@media (min-width: 50rem) {
+    .pricingSwiper {
+        display: none;
+    }
+}
+
 @media (max-width: 50rem) {
     .pricing-section {
         table {
             display: none;
+        }
+    }
+    .pricingSwiper {
+        .swiper-slide {
+            background: #404040;
         }
     }
 }
