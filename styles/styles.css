@@ -83,7 +83,7 @@ body {
 
 #logo {
   font-family: Vanguard;
-  font-size: 3em;
+  font-size: clamp(2.25em, 4vw, 4em);
   margin: 2rem;
 }
 
@@ -121,7 +121,7 @@ body {
   margin: 0;
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 48rem) {
   .primary-navigation {
     gap: var(--gap, 3rem);
     position: fixed;
@@ -166,6 +166,13 @@ body {
   }
 }
 
+@media (min-width: 30rem) and (max-width: 48rem) {
+  #logo {
+    font-size: 2.25em;
+    color: blue;
+  }
+}
+
 @media (max-width: 30rem) {
   #logo {
     font-size: 2em;
@@ -180,7 +187,6 @@ body {
 .page-wrapper {
   margin: auto;
   width: 80vw;
-  min-width: 800px;
 }
 
 .hero-section {
@@ -219,6 +225,20 @@ body {
   margin-bottom: auto;
   width: 80vw;
   min-width: 800px;
+}
+
+@media (min-width: 30rem) and (max-width: 48rem) {
+  .page-wrapper {
+    min-width: 0;
+  }
+  .hero-section h1 {
+    font-size: clamp(50px, 15vw, 90px);
+  }
+  .hero-section #hero-text {
+    font-size: clamp(20px, 7vw, 40px);
+    margin-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 30rem) {
@@ -274,6 +294,18 @@ hr {
 
 .business-section p {
   font-size: 2em;
+}
+
+@media (min-width: 30rem) and (max-width: 48rem) {
+  .business-section {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  .business-section p {
+    line-height: 1.5em;
+    font-size: clamp(12px, 4.75vw, 30px);
+  }
 }
 
 @media (max-width: 30rem) {
@@ -346,6 +378,22 @@ hr {
   border-bottom: 0px;
 }
 
+@media (min-width: 30rem) and (max-width: 48rem) {
+  .offer-section {
+    display: block;
+  }
+  .offer-section .left-side {
+    position: relative;
+    top: 0;
+    margin-top: 2.5rem;
+  }
+  .offer-section .right-side .content-area {
+    height: 20rem;
+    padding-bottom: 2rem;
+    border: 0;
+  }
+}
+
 @media (max-width: 30rem) {
   .offer-section {
     display: block;
@@ -372,6 +420,10 @@ hr {
 .swiper {
   width: 100%;
   height: 60vh;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: white;
 }
 
 .swiper-slide {
@@ -490,6 +542,25 @@ hr {
   width: 37ch;
 }
 
+@media (min-width: 30rem) and (max-width: 48rem) {
+  .founder-section .founder-text {
+    display: block;
+    padding-top: 3.5rem;
+  }
+  .founder-section .founder-text p {
+    margin-top: 2rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .founder-section .founder-portrait {
+    display: block;
+  }
+  .founder-section .portrait-card:nth-child(2n) {
+    margin-top: 5.5rem;
+  }
+}
+
 @media (max-width: 30rem) {
   .founder-section .founder-text {
     display: block;
@@ -541,6 +612,25 @@ hr {
       -ms-flex: 0 1 17%;
           flex: 0 1 17%;
   padding: 1em;
+}
+
+@media (min-width: 30rem) and (max-width: 48rem) {
+  .cooperation-section {
+    display: block;
+  }
+  .cooperation-section p {
+    margin-top: 2.5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .logo-section img {
+    gap: 0rem;
+    padding: 0.5rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 5%;
+            flex: 0 1 5%;
+  }
 }
 
 @media (max-width: 30rem) {
@@ -620,18 +710,58 @@ hr {
   padding-bottom: 2rem;
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 48rem) {
   .pricingSwiper {
     display: none;
   }
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 48rem) {
   .pricing-section table {
     display: none;
   }
+  .pricingSwiper {
+    height: 50vh;
+  }
   .pricingSwiper .swiper-slide {
+    border: 0;
     background: #404040;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .pricingSwiper .swiper-slide .slider-card {
+    text-align: left;
+    width: 100%;
+  }
+  .pricingSwiper .swiper-slide .slider-card .pricing-category {
+    font-family: NPS-Medium;
+    font-size: 0.9em;
+  }
+  .pricingSwiper .swiper-slide .slider-card p {
+    padding: 1rem 1.75rem;
+  }
+  .pricingSwiper .swiper-slide .slider-card hr {
+    margin: auto;
+    width: 85%;
+  }
+}
+
+@media (min-width: 30rem) and (max-width: 48rem) {
+  .pricing-section .pricing-text {
+    display: block;
+  }
+  .pricing-section .pricing-text p {
+    margin-top: 2.5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .pricing-section .pricing-includes {
+    display: block !important;
+  }
+  .pricing-section .pricing-includes h3 {
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -696,6 +826,27 @@ hr {
   font-family: NPS-Regular;
   font-size: 18px;
   padding: 2rem;
+}
+
+@media (min-width: 30rem) and (max-width: 48rem) {
+  .last-section #cta-text {
+    font-size: 4rem;
+  }
+  .last-section #cta-mail {
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 2.5rem;
+    padding: 0;
+  }
+  .last-section img {
+    margin-top: 2.5rem;
+  }
+  .last-section .footer-font {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 30rem) {
