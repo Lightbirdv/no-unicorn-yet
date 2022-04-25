@@ -166,7 +166,7 @@ body {
   }
 }
 
-@media (min-width: 30rem) and (max-width: 48rem) {
+@media (min-width: 30rem) and (max-width: 82rem) {
   #logo {
     font-size: 2.25em;
     color: blue;
@@ -187,6 +187,7 @@ body {
 .page-wrapper {
   margin: auto;
   width: 80vw;
+  max-width: 100rem;
 }
 
 .hero-section {
@@ -227,7 +228,7 @@ body {
   min-width: 800px;
 }
 
-@media (min-width: 30rem) and (max-width: 48rem) {
+@media (min-width: 30rem) and (max-width: 82rem) {
   .page-wrapper {
     min-width: 0;
   }
@@ -296,7 +297,7 @@ hr {
   font-size: 2em;
 }
 
-@media (min-width: 30rem) and (max-width: 48rem) {
+@media (min-width: 30rem) and (max-width: 82rem) {
   .business-section {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -378,7 +379,7 @@ hr {
   border-bottom: 0px;
 }
 
-@media (min-width: 30rem) and (max-width: 48rem) {
+@media (max-width: 82rem) {
   .offer-section {
     display: block;
   }
@@ -388,23 +389,42 @@ hr {
     margin-top: 2.5rem;
   }
   .offer-section .right-side .content-area {
-    height: 20rem;
-    padding-bottom: 2rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 3rem 0;
     border: 0;
+    border-bottom: 1px solid white !important;
+  }
+  .offer-section .right-side .content-area .content-text {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .offer-section .right-side .content-area:last-child {
+    border-bottom: 0 !important;
+  }
+  .offer-section hr {
+    margin-top: 3rem;
   }
 }
 
-@media (max-width: 30rem) {
-  .offer-section {
-    display: block;
+@media (max-width: 46rem) {
+  .offer-section .content-area {
+    display: block !important;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
   }
-  .offer-section .left-side {
-    position: relative;
-    top: 0;
-    margin-top: 2.5rem;
+  .offer-section .content-area .content-text {
+    margin-top: 3rem;
+    padding: 0 !important;
   }
-  .offer-section .right-side .content-area {
-    border: 0;
+  .offer-section .content-area img {
+    margin-top: 3rem;
   }
 }
 
@@ -542,7 +562,7 @@ hr {
   width: 37ch;
 }
 
-@media (min-width: 30rem) and (max-width: 48rem) {
+@media (min-width: 46rem) and (max-width: 82rem) {
   .founder-section .founder-text {
     display: block;
     padding-top: 3.5rem;
@@ -556,18 +576,29 @@ hr {
   .founder-section .founder-portrait {
     display: block;
   }
+  .founder-section .portrait-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4rem;
+  }
+  .founder-section .portrait-card .founder-description {
+    margin: auto;
+  }
+  .founder-section .portrait-card p {
+    margin-top: 0;
+  }
   .founder-section .portrait-card:nth-child(2n) {
     margin-top: 5.5rem;
   }
 }
 
-@media (max-width: 30rem) {
+@media (max-width: 46rem) {
   .founder-section .founder-text {
     display: block;
     padding-top: 3.5rem;
   }
   .founder-section .founder-text p {
-    margin-top: 2rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -596,6 +627,8 @@ hr {
 }
 
 .logo-section {
+  margin: auto;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,14 +640,19 @@ hr {
 }
 
 .logo-section img {
-  width: 117px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 17%;
-          flex: 0 1 17%;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
   padding: 1em;
 }
 
-@media (min-width: 30rem) and (max-width: 48rem) {
+@media (min-width: 30rem) and (max-width: 82rem) {
   .cooperation-section {
     display: block;
   }
@@ -710,13 +748,13 @@ hr {
   padding-bottom: 2rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 82rem) {
   .pricingSwiper {
     display: none;
   }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 82rem) {
   .pricing-section table {
     display: none;
   }
@@ -747,7 +785,7 @@ hr {
   }
 }
 
-@media (min-width: 30rem) and (max-width: 48rem) {
+@media (min-width: 30rem) and (max-width: 82rem) {
   .pricing-section .pricing-text {
     display: block;
   }
@@ -828,7 +866,7 @@ hr {
   padding: 2rem;
 }
 
-@media (min-width: 30rem) and (max-width: 48rem) {
+@media (min-width: 30rem) and (max-width: 82rem) {
   .last-section #cta-text {
     font-size: 4rem;
   }

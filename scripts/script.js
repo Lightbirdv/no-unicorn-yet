@@ -30,8 +30,11 @@ var swiper = new Swiper(".mySwiper", {
   breakpoints: {
     // when window width is <= 499px
     768: {
-        slidesPerView: 3,
+        slidesPerView: "2",
         spaceBetweenSlides: 0
+    },
+    1024: {
+      slidesPerView: "3"
     }
   }
 });
@@ -47,7 +50,7 @@ var swiper = new Swiper(".pricingSwiper", {
 });
 
 var swiper = new Swiper(".qtProcessSlider", {
-  slidesPerView: 1,
+  slidesPerView: "auto",
   centeredSlides: false,
   spaceBetween: 30,
   pagination: {
@@ -58,14 +61,7 @@ var swiper = new Swiper(".qtProcessSlider", {
     1024: {
       slidesPerView: "auto"
     }  
-  },
-  // on:{
-  //   beforeResize() {
-  //     if (window.innerWidth >= 1024) {
-  //       swiper.slides.css('width', '');
-  //     }
-  //   }
-  // }
+  }
 });
 
 var swiper = new Swiper(".caseStudySwiper", {

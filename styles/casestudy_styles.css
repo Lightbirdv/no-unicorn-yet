@@ -110,6 +110,7 @@ body {
 .page-wrapper {
   margin: auto;
   width: 80vw;
+  max-width: 100rem;
 }
 
 /* end basic classes */
@@ -267,6 +268,9 @@ body {
 }
 
 .swiper-slide {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   text-align: center;
   font-size: 18px;
   /* Center slide text vertically */

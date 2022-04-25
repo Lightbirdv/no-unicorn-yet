@@ -155,7 +155,7 @@ body {
     }
 }
 
-@media (min-width: 30rem) and (max-width: 48rem)  {
+@media (min-width: 30rem) and (max-width: 82rem)  {
     #logo {
         font-size: 2.25em;
         color: blue;
@@ -177,7 +177,7 @@ body {
 .page-wrapper {
     margin: auto;
     width: 80vw;
-    // min-width: 800px;
+    max-width: 100rem;
 }
 
 .hero-section {
@@ -209,7 +209,7 @@ body {
     }
 }
 
-@media (min-width: 30rem) and (max-width: 48rem)  {
+@media (min-width: 30rem) and (max-width: 82rem)  {
     .page-wrapper {
         min-width: 0;
     }
@@ -272,7 +272,7 @@ hr {
     }
 }
 
-@media (min-width: 30rem) and (max-width: 48rem)  {
+@media (min-width: 30rem) and (max-width: 82rem)  {
     .business-section {
         margin-top: 2.5rem;
         margin-bottom: 2.5rem;
@@ -335,7 +335,7 @@ hr {
     }
 }
 
-@media (min-width: 30rem) and (max-width: 48rem)  {
+@media (max-width: 82rem)  {
     .offer-section {
         display: block;
         .left-side {
@@ -345,27 +345,36 @@ hr {
         }
         .right-side {
             .content-area {
-                height: 20rem;
-                padding-bottom: 2rem;
+                justify-content: flex-start;
+                height: fit-content;
+                padding: 3rem 0;
                 border: 0;
-                
+                border-bottom: 1px solid white!important;
+                .content-text {
+                    width:fit-content;
+                }
             }
+            .content-area:last-child {
+                border-bottom: 0!important;
+            }
+        }
+        hr {
+            margin-top: 3rem;
         }
     }
 }
 
-@media (max-width: 30rem) {
+@media (max-width: 46rem) {
     .offer-section {
-        display: block;
-        .left-side {
-            position: relative;
-            top: 0;
-            margin-top: 2.5rem;
-        }
-        .right-side {
-            .content-area {
-                border: 0;
-                
+        .content-area {
+            display: block!important;
+            height:fit-content!important;
+            .content-text {
+                margin-top: 3rem;
+                padding:0!important;
+            }
+            img {
+                margin-top: 3rem;
             }
         }
     }
@@ -494,7 +503,7 @@ hr {
 
 }
 
-@media (min-width: 30rem) and (max-width: 48rem)  { 
+@media (min-width: 46rem) and (max-width: 82rem)  { 
     .founder-section {
         .founder-text{
             display:block;
@@ -507,19 +516,28 @@ hr {
         .founder-portrait {
             display: block;
         }
+        .portrait-card {
+            display: flex;
+            gap: 4rem;
+            .founder-description {
+                margin: auto;
+            }
+            p {
+                margin-top: 0;
+            }
+        }
         .portrait-card:nth-child(2n) {
             margin-top: 5.5rem;
         }
     }
 }
 
-@media (max-width: 30rem) {
+@media (max-width: 46rem) {
     .founder-section {
         .founder-text{
             display:block;
             padding-top: 3.5rem;
             p{
-                margin-top: 2rem;
                 width: fit-content;
             }
         }
@@ -543,18 +561,21 @@ hr {
 }
 
 .logo-section {
+    margin: auto;
+    width: 60%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding-bottom: 7rem;
     img {
-        width: 117px;
-        flex: 0 1 17%;
+        width:fit-content;
+        height: fit-content;
+        flex: 0 1 20%;
         padding: 1em;
     }
 }
 
-@media (min-width: 30rem) and (max-width: 48rem)  { 
+@media (min-width: 30rem) and (max-width: 82rem)  { 
     .cooperation-section {
         display: block;
         p {
@@ -635,13 +656,13 @@ hr {
     }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 82rem) {
     .pricingSwiper {
         display: none;
     }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 82rem) {
     .pricing-section {
         table {
             display: none;
@@ -673,7 +694,7 @@ hr {
     }
 }
 
-@media (min-width: 30rem) and (max-width: 48rem)  { 
+@media (min-width: 30rem) and (max-width: 82rem)  { 
     .pricing-section {
         .pricing-text {
             p{
@@ -742,7 +763,7 @@ hr {
     }
 }
 
-@media (min-width: 30rem) and (max-width: 48rem)  {  
+@media (min-width: 30rem) and (max-width: 82rem)  {  
     .last-section{
         #cta-text {
             font-size: 4rem;
