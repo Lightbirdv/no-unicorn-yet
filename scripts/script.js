@@ -52,7 +52,7 @@ var swiper = new Swiper(".pricingSwiper", {
 var swiper = new Swiper(".qtProcessSlider", {
   slidesPerView: "auto",
   centeredSlides: false,
-  spaceBetween: 30,
+  spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

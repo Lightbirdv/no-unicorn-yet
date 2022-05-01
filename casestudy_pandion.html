@@ -11,7 +11,8 @@
 
     <body>
         <header class="primary-header flex">
-            <a href="index.html"><p id="logo">NO UNICORN (YET)</p></a>
+            <a href="index.html"><img class="logo" src="./images/logo.svg" alt="logo"></a>
+            <a href="index.html"><img class="logo-mobile" src="./images/logo-mobile.svg" alt="logo"></a>
 
             <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only"></span></button>
 
@@ -43,10 +44,10 @@
 
         <div class="hero-section">
             <div class="page-wrapper">
-                <h2 class="margintop">Pandion</h2>
-                <h2>”Himmel Unter Berlin” - Einladungsmanagement</h2>
+                <h2 class="hero-header margintop">Pandion</h2>
+                <h2 class="hero-slogan">”Himmel Unter Berlin” - Einladungsmanagement</h2>
             </div>
-            <img class="margintop screenpicture" src="./images/cs_pandion/Himmel unter Berlin 1.png" alt="plakat qt/eventstudio">
+            <img class="margintop hdpicture" src="./images/cs_pandion/pandionhero.png" alt="plakat qt/eventstudio">
         </div>
 
         <div class="page-wrapper">
@@ -77,7 +78,7 @@
                     <p class="margintop">Durch moderne Software ist es uns möglich, individualisierte QR-Codes automatisch zu generieren, wobei jeder QR-Code eine spezifischen Emailadresse auf der Gästeliste zugeordnet wird. Um eine zusätzliche Absicherung für den Kunden zu schaffen, haben wir das Grafikdesign so angelegt, dass es sichim Falle einer Weiterleitung offensichtlich verschiebt und damit offenbart, keine offizielle Einladung zu sein</p>
                 </div>
             </div>
-            <div class="swiper qtProcessSlider margintop">
+            <div class="swiper qtProcessSlider qtresults margintop">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slider-card">
@@ -102,7 +103,7 @@
                 <p class="test-text margintop">Da das Projekt in einer ‘Secret-Location’ stattgefunden hat, mussten wir die Einladungen auf drei Mailings aufsplitten: Allgemeine Einladung, Bestätigung und Bekanntgabe der Location. Die eingeladenen Gäste konnten sich direkt in der Mail und ohne Umweg einer Landing Page für das Event einladen und erhielten bei Bestätigung einen automatisierten Kalendereintrag auf ihren unterschiedlichen Devices.   
                 </p>
             </div>
-            <img class="metroboard margintop screenpicture" src="./images/cs_pandion/StefanReiss_OT1083_Totale1 1.png" alt="metroboard">
+            <img class="metroboard margintop hdpicture" src="./images/cs_pandion/StefanReiss_OT1083_Totale1 1.png" alt="metroboard">
             <div class="page-wrapper">
                 <p class="margintop">“Wer eine professionelle, unkomplizierte und rasche Umsetzung des Einladungsmanagements für seine Veranstaltungen benötigt und außerdem erwartet, dass kurzfristige Ergänzungen immer möglich sind, ist beim NoUnicornYet-Team an der richtigen Adresse. Regelmäßige Updates und ein zuverlässiges Feedback runden das Gesamtpaket ab! Wir waren sehr zufrieden und freuen uns auf die weitere Zusammenarbeit.”
                 </p>
@@ -121,8 +122,8 @@
                     </p>
                 </div>
             </div>
-            <img class="margintop screenpicture" src="./images/cs_pandion/Bildschirmfoto 2022-04-10 um 19.59 2.png" alt="lifeisqtful">
-            <div class="swiper qtProcessSlider margintop">
+            <!-- <img class="margintop screenpicture" src="./images/cs_pandion/Bildschirmfoto 2022-04-10 um 19.59 2.png" alt="lifeisqtful"> -->
+            <!-- <div class="swiper qtProcessSlider margintop">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slider-card">
@@ -141,22 +142,24 @@
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
-            </div>
+            </div> -->
         </div>
         <div class="swiper caseStudySwiper margintop">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="slider-card">
-                        <h3 class="casestudy-name unselectable">Siemens</h4>
-                        <button class="casestudy-bttn">View Case study -></button>
-                    </div> 
+                        <h3 class="casestudy-name unselectable">QT/eventstudio</h4>
+                        <h3 class="casestudy-slogan unselectable">#LifeIsQTful</h3>
+                        <p class="casestudy-action unselectable">Brand | Design</p>
+                        <a href="casestudy_qteventstudio.html"><button class="casestudy-bttn">View Case study -></button></a>
+                    </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="slider-card">
-                        <h3 class="casestudy-name unselectable">Himmel Unter Berlin</h4>
-                        <h3 class="casestudy-slogan unselectable">Einladungsmanagment</h3>
-                        <p class="casestudy-action unselectable">Brand | Marketing Concept | Design</p>
-                        <button class="casestudy-bttn">View Case study -></button>
+                        <h3 class="casestudy-name unselectable">Siemens</h4>
+                        <h3 class="casestudy-slogan unselectable">Fassadengestaltung</h3>
+                        <p class="casestudy-action unselectable">Folierung | Beratung</p>
+                        <a href="casestudy_siemens.html"><button class="casestudy-bttn">Mehr erfahren -></button></a>
                     </div> 
                 </div>
             </div>
@@ -166,13 +169,13 @@
             <div class="page-wrapper">
                 <div class="cta-section">
                     <h1 id="cta-text">LET'S WORK TOGETHER!</h1>
-                    <h2 id="cta-mail">hello@nounicornyet.com</h2>
-                    <img src="images/mail-cta.svg" alt="mail">
+                    <h2 id="cta-mail">moritz@nounicornyet.com</h2>
+                    <a href="mailto:moritz@nounicornyet.com"><img src="images/mail-cta.svg" alt="mail"></a>
                 </div>
                 <hr></hr>
                 <div class="footer-section">
-                    <p class="footer-font">PRIVACY POLICY</p>
-                    <p class="footer-font">TERMS & CONDITIONS</p>
+                    <a href="impressum.html"><p class="footer-font">IMPRESSUM</p></a>
+                    <a href="datenschutz.html"><p class="footer-font">DATENSCHUTZ</p></a>
                 </div>
             </div>
         </div>

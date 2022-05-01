@@ -81,10 +81,14 @@ body {
   overflow-x: hidden;
 }
 
-#logo {
-  font-family: Vanguard;
-  font-size: clamp(2.25em, 4vw, 4em);
-  margin: 2rem;
+.logo {
+  margin-left: 2rem;
+  width: 19rem;
+  padding: 1rem 0;
+}
+
+.logo-mobile {
+  display: none;
 }
 
 .flex {
@@ -109,6 +113,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: 1rem;
 }
 
 .mobile-nav-toggle {
@@ -121,7 +126,21 @@ body {
   margin: 0;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 51.6rem) {
+  .logo {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+    width: 20vw;
+    min-width: 6rem;
+    padding: 1rem 0;
+  }
+  .primary-header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   .primary-navigation {
     gap: var(--gap, 3rem);
     position: fixed;
@@ -150,7 +169,7 @@ body {
   .mobile-nav-toggle {
     display: block;
     position: absolute;
-    top: 3.25rem;
+    top: 5vw;
     right: 2rem;
     z-index: 10;
     background-color: transparent;
@@ -166,21 +185,10 @@ body {
   }
 }
 
-@media (min-width: 30rem) and (max-width: 82rem) {
-  #logo {
-    font-size: 2.25em;
-    color: blue;
-  }
-}
-
 @media (max-width: 30rem) {
-  #logo {
-    font-size: 2em;
-    color: red;
-  }
   .mobile-nav-toggle {
     width: 1.5rem;
-    top: 2.75rem;
+    top: 1.75rem;
   }
 }
 
@@ -188,6 +196,12 @@ body {
   margin: auto;
   width: 80vw;
   max-width: 100rem;
+}
+
+@media (max-width: 51.6rem) {
+  .page-wrapper {
+    width: 90vw;
+  }
 }
 
 .hero-section {
@@ -225,7 +239,6 @@ body {
   margin-top: auto;
   margin-bottom: auto;
   width: 80vw;
-  min-width: 800px;
 }
 
 @media (min-width: 30rem) and (max-width: 82rem) {
@@ -343,6 +356,10 @@ hr {
   /* Safari */
 }
 
+.offer-section .left-side .sticky-text {
+  padding-bottom: 100px;
+}
+
 .offer-section .right-side .content-area {
   border: 1px solid white;
   border-right: 0px;
@@ -362,12 +379,7 @@ hr {
   height: 460px;
 }
 
-.offer-section .right-side .content-area img {
-  width: 120px;
-}
-
 .offer-section .right-side .content-area .content-text {
-  padding-left: 50px;
   width: 45%;
 }
 
@@ -388,10 +400,10 @@ hr {
     top: 0;
     margin-top: 2.5rem;
   }
+  .offer-section .left-side .sticky-text {
+    padding-bottom: 0;
+  }
   .offer-section .right-side .content-area {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -429,17 +441,17 @@ hr {
 }
 
 .casestudy-section {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 .casestudy-section h2 {
-  width: 15ch;
   margin-bottom: 5rem;
 }
 
 .swiper {
   width: 100%;
   height: 60vh;
+  min-height: 30rem;
 }
 
 .swiper .swiper-pagination-bullet-active {
@@ -546,7 +558,6 @@ hr {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 7rem;
-  min-width: 360px;
 }
 
 .founder-section .founder-portrait .portrait-name {
@@ -567,8 +578,10 @@ hr {
     display: block;
     padding-top: 3.5rem;
   }
+  .founder-section .founder-text h2 {
+    padding-bottom: 2rem;
+  }
   .founder-section .founder-text p {
-    margin-top: 2rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -598,6 +611,9 @@ hr {
     display: block;
     padding-top: 3.5rem;
   }
+  .founder-section .founder-text h2 {
+    padding-bottom: 2rem;
+  }
   .founder-section .founder-text p {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -605,9 +621,16 @@ hr {
   }
   .founder-section .founder-portrait {
     display: block;
+    min-width: none !important;
   }
   .founder-section .portrait-card:nth-child(2n) {
     margin-top: 5.5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .founder-section img {
+    width: 100%;
   }
 }
 
@@ -619,7 +642,7 @@ hr {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 10.5rem;
-  padding-bottom: 7rem;
+  padding-bottom: 5rem;
 }
 
 .cooperation-section p {
@@ -627,29 +650,33 @@ hr {
 }
 
 .logo-section {
-  margin: auto;
-  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-bottom: 7rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.logo-section .logo-image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 23%;
+          flex: 0 0 23%;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
 .logo-section img {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 20%;
-          flex: 0 1 20%;
-  padding: 1em;
+  width: 150px;
+}
+
+@media (max-width: 30rem) {
+  .logo-section img {
+    width: 125px;
+  }
 }
 
 @media (min-width: 30rem) and (max-width: 82rem) {
@@ -708,9 +735,10 @@ hr {
 .pricing-section table {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
   color: white;
   background-color: #404040;
-  padding: 0.75rem;
+  padding: 2rem 0;
 }
 
 .pricing-section table th {
@@ -734,11 +762,14 @@ hr {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   gap: 5.2em;
-  padding-top: 10.5rem;
+  margin-top: 5rem;
   padding-bottom: 7rem;
 }
 
 .pricing-section ul {
+  padding: 1.25rem;
+  padding-bottom: 0;
+  padding-top: 0.5rem;
   color: white;
 }
 
@@ -748,13 +779,13 @@ hr {
   padding-bottom: 2rem;
 }
 
-@media (min-width: 82rem) {
+@media (min-width: 64rem) {
   .pricingSwiper {
     display: none;
   }
 }
 
-@media (max-width: 82rem) {
+@media (max-width: 64rem) {
   .pricing-section table {
     display: none;
   }
@@ -762,8 +793,12 @@ hr {
     height: 50vh;
   }
   .pricingSwiper .swiper-slide {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     border: 0;
     background: #404040;
+    opacity: 100%;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
@@ -777,7 +812,7 @@ hr {
     font-size: 0.9em;
   }
   .pricingSwiper .swiper-slide .slider-card p {
-    padding: 1rem 1.75rem;
+    padding: 1rem 6vw;
   }
   .pricingSwiper .swiper-slide .slider-card hr {
     margin: auto;
@@ -819,6 +854,9 @@ hr {
   .pricing-section .pricing-includes h3 {
     margin-bottom: 2.5rem;
   }
+  .pricingSwiper {
+    height: 35rem;
+  }
 }
 
 .last-section {
@@ -836,15 +874,19 @@ hr {
 
 .last-section #cta-text {
   font-family: NPS-Bold;
-  font-size: 110px;
+  font-size: clamp(3rem, 7vw, 8rem);
   color: #151515;
 }
 
 .last-section #cta-mail {
-  -webkit-text-stroke: #262626 0.5px;
-  font-family: NPS-Regular;
-  font-size: 90px;
-  padding: 5rem;
+  color: #151515;
+  font-family: Silka-Regular;
+  font-size: clamp(1.25rem, 3vw, 4rem);
+  padding: 1.5rem 0;
+}
+
+.last-section img {
+  padding-top: 2rem;
 }
 
 .last-section .footer-section {
@@ -867,20 +909,6 @@ hr {
 }
 
 @media (min-width: 30rem) and (max-width: 82rem) {
-  .last-section #cta-text {
-    font-size: 4rem;
-  }
-  .last-section #cta-mail {
-    margin: auto;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-size: 2.5rem;
-    padding: 0;
-  }
-  .last-section img {
-    margin-top: 2.5rem;
-  }
   .last-section .footer-font {
     font-size: 1rem;
     padding: 1rem;
@@ -888,20 +916,6 @@ hr {
 }
 
 @media (max-width: 30rem) {
-  .last-section #cta-text {
-    font-size: 4rem;
-  }
-  .last-section #cta-mail {
-    margin-top: 2.5rem;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-size: 2.5rem;
-    padding: 0;
-  }
-  .last-section img {
-    margin-top: 2.5rem;
-  }
   .last-section .footer-font {
     font-size: 1rem;
     padding: 1rem;

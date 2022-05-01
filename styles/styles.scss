@@ -82,10 +82,14 @@ body {
     overflow-x: hidden;
 }
 
-#logo {
-    font-family: Vanguard;
-    font-size: clamp(2.25em, 4vw, 4em);
-    margin: 2rem;
+.logo {
+    margin-left:2rem;
+    width: 19rem;
+    padding: 1rem 0;
+}
+
+.logo-mobile {
+    display: none;
 }
 
 .flex {
@@ -105,6 +109,7 @@ body {
 .primary-header {
     align-items: center;
     justify-content: space-between;
+    margin-left: 1rem;
 }
 
 .mobile-nav-toggle {
@@ -117,7 +122,19 @@ body {
     margin: 0;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 51.6rem) {
+    .logo {
+        display:none;
+    }
+    .logo-mobile {
+        display: block;
+        width: 20vw;
+        min-width: 6rem;
+        padding: 1rem 0;
+    }
+    .primary-header{
+        justify-content: flex-start;
+    }
     .primary-navigation{
         gap: var(--gap, 3rem);
         position: fixed;
@@ -138,7 +155,7 @@ body {
     .mobile-nav-toggle {
         display: block;
         position: absolute;
-        top: 3.25rem;
+        top: 5vw;
         right: 2rem;
         z-index: 10;
         background-color: transparent;
@@ -155,21 +172,10 @@ body {
     }
 }
 
-@media (min-width: 30rem) and (max-width: 82rem)  {
-    #logo {
-        font-size: 2.25em;
-        color: blue;
-    }
-}
-
 @media (max-width: 30rem) {
-    #logo {
-        font-size: 2em;
-        color: red;
-    }
     .mobile-nav-toggle {
         width: 1.5rem;
-        top: 2.75rem;
+        top: 1.75rem;
     }
 
 }
@@ -178,6 +184,12 @@ body {
     margin: auto;
     width: 80vw;
     max-width: 100rem;
+}
+
+@media (max-width: 51.6rem) {
+    .page-wrapper {
+        width: 90vw;
+    }
 }
 
 .hero-section {
@@ -205,7 +217,6 @@ body {
         margin-top:auto;
         margin-bottom: auto;
         width: 80vw;
-        min-width: 800px;
     }
 }
 
@@ -300,6 +311,9 @@ hr {
     display:flex;
     flex-direction: row;
     .left-side {
+        .sticky-text {
+            padding-bottom: 100px;
+        }
         width:100%;
         height:fit-content;
         margin-top: 10.5rem;
@@ -317,11 +331,7 @@ hr {
             justify-content: center;
             
             height: 460px;
-            img {
-                width: 120px;
-            }
             .content-text{
-                padding-left:50px;
                 width:45%;
                 
             }
@@ -340,12 +350,14 @@ hr {
         display: block;
         .left-side {
             position: relative;
+            .sticky-text {
+                padding-bottom:0;
+            }
             top: 0;
             margin-top: 2.5rem;
         }
         .right-side {
             .content-area {
-                justify-content: flex-start;
                 height: fit-content;
                 padding: 3rem 0;
                 border: 0;
@@ -381,9 +393,8 @@ hr {
 }
 
 .casestudy-section {
-    margin-top: 5rem;
+    margin-top: 7rem;
     h2 {
-        width: 15ch;
         margin-bottom: 5rem;
     }
 }
@@ -391,6 +402,7 @@ hr {
 .swiper {
     width: 100%;
     height: 60vh;
+    min-height: 30rem;
     .swiper-pagination-bullet-active {
         background-color: white;
     }
@@ -489,7 +501,6 @@ hr {
         display:flex;
         justify-content: space-between;
         padding-bottom: 7rem;
-        min-width:360px;
         .portrait-name{
             max-width: fit-content;
             font-family: NPS-Medium;
@@ -506,10 +517,13 @@ hr {
 @media (min-width: 46rem) and (max-width: 82rem)  { 
     .founder-section {
         .founder-text{
+            h2 {
+                padding-bottom: 2rem;
+            }
             display:block;
             padding-top: 3.5rem;
             p{
-                margin-top: 2rem;
+                // margin-top: 2rem;
                 width: fit-content;
             }
         }
@@ -535,6 +549,9 @@ hr {
 @media (max-width: 46rem) {
     .founder-section {
         .founder-text{
+            h2 {
+                padding-bottom: 2rem;
+            }
             display:block;
             padding-top: 3.5rem;
             p{
@@ -543,9 +560,18 @@ hr {
         }
         .founder-portrait {
             display: block;
+            min-width: none!important;
         }
         .portrait-card:nth-child(2n) {
             margin-top: 5.5rem;
+        }
+    }
+}
+
+@media (max-width: 30rem) {
+    .founder-section {
+        img {
+            width:100%;
         }
     }
 }
@@ -554,24 +580,33 @@ hr {
     display: flex;
     justify-content: space-between;
     padding-top: 10.5rem;
-    padding-bottom: 7rem;
+    padding-bottom: 5rem;
     p {
         width: 50ch;
     }
 }
 
 .logo-section {
-    margin: auto;
-    width: 60%;
+    // width: 90vw;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    padding-bottom: 7rem;
+    justify-content: center;
+    .logo-image {
+        flex: 0 0 23%;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
     img {
-        width:fit-content;
-        height: fit-content;
-        flex: 0 1 20%;
-        padding: 1em;
+        width: 150px;
+    }
+    padding-bottom: 3rem;
+}
+
+@media (max-width: 30rem) {
+    .logo-section {
+        img {
+            width: 125px;
+        }
     }
 }
 
@@ -622,9 +657,10 @@ hr {
     table {
         margin-left:auto;
         margin-right: auto;
+        width:100%;
         color: white;
         background-color: #404040;
-        padding: 0.75rem;
+        padding: 2rem 0;
         th {
 
             padding: 1rem 4rem;
@@ -643,10 +679,13 @@ hr {
         display:flex;
         justify-content: space-around;
         gap: 5.2em;
-        padding-top: 10.5rem;
+        margin-top: 5rem;
         padding-bottom: 7rem;   
     }
     ul {
+        padding: 1.25rem;
+        padding-bottom: 0;
+        padding-top: 0.5rem;
         color: white;
         li {
             font-family: Silka-Regular;
@@ -656,13 +695,13 @@ hr {
     }
 }
 
-@media (min-width: 82rem) {
+@media (min-width: 64rem) {
     .pricingSwiper {
         display: none;
     }
 }
 
-@media (max-width: 82rem) {
+@media (max-width: 64rem) {
     .pricing-section {
         table {
             display: none;
@@ -671,8 +710,10 @@ hr {
     .pricingSwiper {
         height: 50vh;
         .swiper-slide {
+            align-items: baseline;
             border: 0;
             background: #404040;
+            opacity: 100%;
             justify-content: left;
             .slider-card {
                 // align-items: flex-start;
@@ -683,7 +724,7 @@ hr {
                     font-size: 0.9em;
                 }
                 p {
-                    padding: 1rem 1.75rem;
+                    padding: 1rem 6vw;
                 }
                 hr {
                     margin: auto;
@@ -728,6 +769,9 @@ hr {
             display: block!important;
         }
     }
+    .pricingSwiper { 
+        height: 35rem;
+    }
 }
 
 .last-section {
@@ -740,15 +784,18 @@ hr {
     align-items: center;
     #cta-text {
         font-family: NPS-Bold;
-        font-size: 110px;
-        color: #151515
+        font-size: clamp(3rem, 7vw, 8rem);
+        color: #151515;
     }
 
     #cta-mail {
-        -webkit-text-stroke: #262626 0.5px;
-        font-family: NPS-Regular;
-        font-size: 90px;
-        padding: 5rem;
+        color:#151515;
+        font-family: Silka-Regular;
+        font-size: clamp(1.25rem, 3vw, 4rem);
+        padding: 1.5rem 0;
+    }
+    img {
+        padding-top: 2rem;
     }
     .footer-section{
         display: flex;
@@ -765,18 +812,6 @@ hr {
 
 @media (min-width: 30rem) and (max-width: 82rem)  {  
     .last-section{
-        #cta-text {
-            font-size: 4rem;
-        }
-        #cta-mail {
-            margin: auto;
-            width:fit-content;
-            font-size: 2.5rem;
-            padding: 0;
-        }
-        img{
-            margin-top: 2.5rem;
-        }
         .footer-font {
             font-size: 1rem;
             padding: 1rem;
@@ -786,18 +821,6 @@ hr {
 
 @media (max-width: 30rem) {
     .last-section{
-        #cta-text {
-            font-size: 4rem;
-        }
-        #cta-mail {
-            margin-top: 2.5rem;
-            width:fit-content;
-            font-size: 2.5rem;
-            padding: 0;
-        }
-        img{
-            margin-top: 2.5rem;
-        }
         .footer-font {
             font-size: 1rem;
             padding: 1rem;

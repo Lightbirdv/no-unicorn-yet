@@ -56,7 +56,7 @@ h2 {
     font-family: NPS-Black;
     font-size: 2.5rem;
     color: white;
-    line-height: 1em;
+    line-height: 1.4em;
 }
 
 h3 {
@@ -110,34 +110,31 @@ body {
     margin: auto;
     width: 80vw;
     max-width: 100rem;
+    overflow:hidden;
+}
+
+@media (max-width: 51.6rem) {
+    .page-wrapper {
+        width: 90vw;
+    }
 }
 
 /* end basic classes */
 
-#logo {
-    font-family: Vanguard;
-    font-size: clamp(2.25em, 4vw, 4em);
-    margin: 2rem;
-    color: red;
+.logo {
+    margin-left:2rem;
+    width: 19rem;
+    padding: 1rem 0;
 }
 
-/* check for breakpoints */
-
-@media (min-width: 30rem) { 
-    #logo {
-        color: blue;
-    }
+.logo-mobile {
+    display: none;
 }
 
-@media (min-width: 48rem) { 
-    #logo {
-        color: green;
-    }
-}
-
-@media (min-width: 64rem) {
-    #logo {
-        color: black;
+@media (max-width: 30rem) {
+    .mobile-nav-toggle {
+        width: 1.5rem;
+        top: 2.5rem;
     }
 }
 
@@ -158,7 +155,19 @@ body {
     margin: 0;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 51.6rem) {
+    .logo {
+        display:none;
+    }
+    .logo-mobile {
+        display: block;
+        width: 20vw;
+        min-width: 6rem;
+        padding: 1rem 0;
+    }
+    .primary-header{
+        justify-content: flex-start;
+    }
     .primary-navigation{
         gap: var(--gap, 3rem);
         position: fixed;
@@ -179,7 +188,7 @@ body {
     .mobile-nav-toggle {
         display: block;
         position: absolute;
-        top: 3.25rem;
+        top: 5vw;
         right: 2rem;
         z-index: 10;
         background-color: transparent;
@@ -196,7 +205,38 @@ body {
     }
 }
 
+@media (max-width: 30rem) {
+    .mobile-nav-toggle {
+        width: 1.5rem;
+        top: 1.75rem;
+    }
+}
+
 /* hero section */
+
+.hero-section {
+    .hero-header {
+        line-height: 2rem;
+    }
+    h2 {
+        font-family: Silka-Regular;
+    }
+    .hero-slogan {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 51.6rem) { 
+    .hero-section {
+        h2 {
+            font-size: 2rem;
+        }
+        .hero-slogan {
+            font-size: 1.4rem;
+        }
+    }  
+}
 
 @media (min-width: 64rem) {
     .challenge-section {
@@ -271,6 +311,11 @@ body {
     align-items: center;
 }
 
+.siemensstadtpic {
+    width: 100%;
+    height: 45vw;
+    object-fit: contain;
+}
 
 .swiper-slide:hover {
     opacity: 1;
@@ -347,6 +392,26 @@ body {
         }
     }
 }
+
+.hdpicture {
+    width: 100%;
+}
+
+.qtresults {
+    .swiper-slide {
+        width: 80vw;
+        height: 45vw;
+        .slider-card {
+            // width: 100%;
+            img {
+                max-width:100%;
+                max-height:100%;
+                object-fit:contain;
+            }
+        }
+    }
+}
+
 .last-section {
     .cta-section {
         padding-top: 10.5rem;
@@ -362,8 +427,8 @@ body {
     }
 
     #cta-mail {
-        -webkit-text-stroke: #262626 0.5px;
-        font-family: NPS-Regular;
+        color:#151515;
+        font-family: Silka-Regular;
         font-size: 90px;
         padding: 5rem;
     }
@@ -384,20 +449,29 @@ body {
 
 .last-section{
     #cta-text {
-        font-size: 4rem;
+        font-size: clamp(3rem, 7vw, 8rem);
     }
     #cta-mail {
         margin: auto;
         width:fit-content;
-        font-size: clamp(2em, 4vw, 4em);
-        border: 1px solid;
+        font-size: clamp(1.25rem, 3vw, 4rem);
         padding: 0;
     }
     img{
-        margin-top: 2.5rem;
+        padding-top: 2rem;
     }
     .footer-font {
         font-size: 1rem;
         padding: 1rem;
+    }
+}
+
+.datenschutz-section {
+    a {
+        color: white;
+    }
+    li {
+        color: white;
+        font-family: Silka-Regular;
     }
 }
