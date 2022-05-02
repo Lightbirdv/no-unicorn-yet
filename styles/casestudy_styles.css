@@ -81,6 +81,15 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .margintop {
   margin-top: 3rem;
 }
@@ -426,6 +435,12 @@ body {
   max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media (min-width: 51.6rem) {
+  .qtresults .swiper-slide {
+    width: 50vw;
+  }
 }
 
 .last-section {

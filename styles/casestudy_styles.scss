@@ -82,6 +82,16 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .margintop {
     margin-top: 3rem;
 }
@@ -287,6 +297,7 @@ body {
 .swiper {
     width: 100%;
     height: fit-content;
+    // min-height: 30rem;
     .swiper-pagination-bullet-active {
         background-color: white;
     }
@@ -408,6 +419,14 @@ body {
                 max-height:100%;
                 object-fit:contain;
             }
+        }
+    }
+}
+
+@media (min-width: 51.6rem) {
+    .qtresults {
+        .swiper-slide{
+            width: 50vw;
         }
     }
 }
