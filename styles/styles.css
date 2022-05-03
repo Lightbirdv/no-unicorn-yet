@@ -304,6 +304,7 @@ hr {
   margin-top: 10em;
   margin-bottom: 10em;
   max-width: 90ch;
+  text-align: center;
 }
 
 .business-section p {
@@ -358,6 +359,10 @@ hr {
 
 .offer-section .left-side .sticky-text {
   padding-bottom: 100px;
+}
+
+.offer-section .right-side img {
+  padding-right: 3rem;
 }
 
 .offer-section .right-side .content-area {
@@ -436,6 +441,7 @@ hr {
     padding: 0 !important;
   }
   .offer-section .content-area img {
+    width: 6rem;
     margin-top: 3rem;
   }
 }
@@ -753,6 +759,7 @@ hr {
 
 .pricing-section table .highlighted {
   font-family: NPS-Bold;
+  font-size: 20px;
 }
 
 .pricing-section .pricing-includes {
@@ -777,6 +784,15 @@ hr {
   font-family: Silka-Regular;
   font-size: 14.5px;
   padding-bottom: 2rem;
+}
+
+@media (max-width: 75rem) {
+  .pricing-section table th {
+    padding: 1rem 2rem;
+  }
+  .pricing-section table td {
+    padding: 1rem 2rem;
+  }
 }
 
 @media (min-width: 64rem) {

@@ -297,6 +297,7 @@ img {
 .swiper {
     width: 100%;
     height: fit-content;
+    max-width: 100rem;
     // min-height: 30rem;
     .swiper-pagination-bullet-active {
         background-color: white;
@@ -426,7 +427,8 @@ img {
 @media (min-width: 51.6rem) {
     .qtresults {
         .swiper-slide{
-            width: 50vw;
+            height: 25rem;
+            width: 50rem;
         }
     }
 }
